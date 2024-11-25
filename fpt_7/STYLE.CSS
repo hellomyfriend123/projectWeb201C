@@ -1,0 +1,89 @@
+/* Cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  header, footer {
+    background-color: #f77f00;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ddd;
+    padding: 10px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  figcaption {
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+  @media (min-width: 772px) {
+    body {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    figure {
+      border-radius: 50%; /* Hình tròn */
+    }
+  
+    figure:last-child {
+      grid-column: span 2; /* Chiếm cả 2 cột */
+    }
+  }
+  @media (min-width: 992px) {
+    body {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    figure {
+      border-radius: 0; /* Gỡ hình tròn */
+    }
+  
+    figure:nth-child(3n) {
+      grid-column: span 2; /* Mỗi hình thứ 3 chiếm 2 cột */
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      scroll-behavior: auto; /* Tắt hiệu ứng cuộn */
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212;
+      color: #fff;
+    }
+  
+    header, footer {
+      background-color: #333;
+    }
+  
+    figure {
+      background-color: #222;
+      color: #ff0;
+      border: 2px solid #000;
+    }
+  }
+        
